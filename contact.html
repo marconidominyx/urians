@@ -20,30 +20,40 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
 			rel="stylesheet"
 		/>
 	</head>
 	<body>
+		<div class="background-globes">
+			<div class="globe globe-2" style="top: 10%; right: 10%;"></div>
+			<div class="globe globe-3" style="bottom: 10%; left: 10%;"></div>
+		</div>
+
 		<!-- Header -->
-		<header>
+		<header class="glass-header">
 			<div class="container">
-				<div class="logo">
+				<a href="index.html" class="logo">
 					<img
 						src="images/URIAN_SOCIETY.png"
 						alt="Urian Society Logo"
 						class="logo-img"
 					/>
-					<h1>Urian Society</h1>
-				</div>
+					<span class="logo-text">Urian Society</span>
+				</a>
 				<nav>
-					<ul>
+					<ul class="nav-links">
 						<li><a href="index.html">Home</a></li>
-						<li><a href="about.html">About Us</a></li>
+						<li><a href="about.html">About</a></li>
 						<li><a href="events.html">Events</a></li>
 						<li><a href="contact.html" class="active">Contact</a></li>
 					</ul>
+					<button class="theme-toggle" aria-label="Toggle theme">
+						<i class="fas fa-moon"></i>
+					</button>
 					<button class="mobile-menu" aria-label="Toggle menu">
 						<i class="fas fa-bars"></i>
 					</button>
@@ -51,159 +61,64 @@
 			</div>
 		</header>
 
-		<!-- Contact Banner -->
-		<section class="page-banner">
+		<!-- Main Contact Section -->
+		<section class="page-header fade-in">
 			<div class="container">
-				<h2 class="fade-in">Contact Us</h2>
-				<p class="fade-in">
-					We'd love to hear from you! Get in touch with our community.
-				</p>
-			</div>
-		</section>
+				<div style="height: 40px;"></div>
+				
+				<!-- Centered Layout since it's just Discord now -->
+				<div style="max-width: 800px; margin: 0 auto; text-align: center;">
+					<span class="gradient-chip">Support & Inquiries</span>
+					<h2 style="font-size: 3rem; margin-bottom: 1.5rem; color: #fff;">Join the Conversation</h2>
+					<p class="contact-subtitle" style="margin-bottom: 4rem;">
+						For now, the only way to contact us is through our Discord server. Whether you have a question or just want to hang out, that's where we make magic happen.
+					</p>
 
-		<!-- Contact Section -->
-		<section class="contact-section">
-			<div class="container">
-				<div class="contact-grid">
-					<div class="contact-info fade-in">
-						<h3>Get in Touch</h3>
-						<div class="contact-item">
-							<i class="fas fa-map-marker-alt"></i>
-							<div class="contact-item-content">
-								<h4>Location</h4>
-								<p>
-									Father Saturnino Urios University<br />San Francisco Street,
-									Butuan City<br />Philippines
-								</p>
-							</div>
-						</div>
-						<div class="contact-item">
-							<i class="fas fa-phone"></i>
-							<div class="contact-item-content">
-								<h4>Phone</h4>
-								<p>+63 9770433448</p>
-							</div>
-						</div>
-						<div class="contact-item">
-							<i class="fas fa-envelope"></i>
-							<div class="contact-item-content">
-								<h4>Email</h4>
-								<p>marconidominyx@gmail.com</p>
-							</div>
-						</div>
-						<div class="contact-item">
-							<i class="fab fa-discord"></i>
-							<div class="contact-item-content">
-								<h4>Discord</h4>
-								<p>
-									Join our Discord community for quick responses and real-time
-									interaction.
-								</p>
-							</div>
-						</div>
-					</div>
-
-					<div class="contact-form fade-in">
-						<h3>Send us a Message</h3>
-						<form id="contactForm">
-							<div class="form-group">
-								<label for="name">Your Name</label>
-								<input type="text" id="name" name="name" required />
-							</div>
-							<div class="form-group">
-								<label for="email">Email Address</label>
-								<input type="email" id="email" name="email" required />
-							</div>
-							<div class="form-group">
-								<label for="subject">Subject</label>
-								<input type="text" id="subject" name="subject" required />
-							</div>
-							<div class="form-group">
-								<label for="message">Message</label>
-								<textarea id="message" name="message" required></textarea>
-							</div>
-							<button type="submit" class="btn primary-btn">
-								Send Message
-							</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- University Promotion -->
-		<section class="university-promo">
-			<div class="container">
-				<h2 class="fade-in">Father Saturnino Urios University</h2>
-				<p class="fade-in">
-					A premier Catholic University in Mindanao, committed to excellence in
-					education since 1901.
-				</p>
-				<div class="university-grid">
-					<div class="university-card fade-in">
-						<i class="fas fa-graduation-cap"></i>
-						<h3>Academic Excellence</h3>
-						<p>
-							Offering quality education across various programs from Basic
-							Education to Graduate Studies.
+					<div class="discord-big-card" style="background: linear-gradient(135deg, #5865F2 0%, #4752C4 100%); padding: 4rem 2rem; border-radius: 24px; box-shadow: 0 20px 50px rgba(88, 101, 242, 0.4);">
+						<i class="fab fa-discord" style="font-size: 5rem; color: #fff; margin-bottom: 2rem;"></i>
+						<h3 style="font-size: 2rem; color: #fff; margin-bottom: 1rem;">Urian Society Discord</h3>
+						<p style="color: rgba(255,255,255,0.9); font-size: 1.2rem; margin-bottom: 3rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+							Open a ticket, join a voice channel, or chat with the community. We are active 24/7.
 						</p>
-					</div>
-					<div class="university-card fade-in">
-						<i class="fas fa-church"></i>
-						<h3>Catholic Values</h3>
-						<p>Fostering spiritual growth and moral values in education.</p>
-					</div>
-					<div class="university-card fade-in">
-						<i class="fas fa-users"></i>
-						<h3>Community</h3>
-						<p>Building strong relationships and nurturing future leaders.</p>
+						<a href="https://discord.gg/razAZHTvu8" target="_blank" class="btn" style="background: #fff; color: #5865F2; font-weight: 700; padding: 1rem 3rem; font-size: 1.2rem; border-radius: 50px;">
+							Launch Discord Server
+						</a>
 					</div>
 				</div>
-				<a
-					href="https://www.urios.edu.ph"
-					target="_blank"
-					class="btn primary-btn"
-					>Visit University Website</a
-				>
+
 			</div>
 		</section>
+
+		<div style="margin-bottom: 6rem;"></div>
 
 		<!-- Footer -->
-		<footer>
+		<footer class="modern-footer">
 			<div class="container">
-				<div class="footer-content">
-					<div class="footer-section">
-						<h3>Quick Links</h3>
+				<div class="footer-top">
+					<div class="footer-brand">
+						<img src="images/URIAN_SOCIETY.png" alt="Logo" class="footer-logo">
+						<p>Empowering the next generation of digital natives.</p>
+					</div>
+					<div class="footer-links">
+						<h4>Explore</h4>
 						<ul>
-							<li><a href="about.html">About Us</a></li>
+							<li><a href="about.html">About</a></li>
 							<li><a href="events.html">Events</a></li>
 							<li><a href="contact.html">Contact</a></li>
 						</ul>
 					</div>
-					<div class="footer-section">
-						<h3>Connect</h3>
-						<div class="social-links">
-							<a href="https://discord.gg/4XucrwJVNX" aria-label="Discord"
-								><i class="fab fa-discord"></i
-							></a>
-							<a href="https://x.com/realkhoni" aria-label="Twitter"
-								><i class="fab fa-twitter"></i
-							></a>
-							<a
-								href="https://www.instagram.com/marconidominyx/"
-								aria-label="Instagram"
-								><i class="fab fa-instagram"></i
-							></a>
-							<a
-								href="https://www.youtube.com/@MarconiDominyx"
-								aria-label="YouTube"
-								><i class="fab fa-youtube"></i
-							></a>
+					<div class="footer-social">
+						<h4>Connect</h4>
+						<div class="social-icons">
+							<a href="https://discord.gg/razAZHTvu8" aria-label="Discord"><i class="fab fa-discord"></i></a>
+							<a href="https://x.com/realkhoni" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+							<a href="https://www.instagram.com/marconidominyx/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+							<a href="https://www.youtube.com/@MarconiDominyx" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
 						</div>
 					</div>
 				</div>
 				<div class="footer-bottom">
-					<p>&copy; 2024 Urian Society. All rights reserved.</p>
+					<p>&copy; 2025 Urian Society. All rights reserved.</p>
 				</div>
 			</div>
 		</footer>
@@ -211,5 +126,6 @@
 		<script src="js/script.js"></script>
 		<script src="js/theme.js"></script>
 		<script src="js/mobile-menu.js"></script>
+		<!-- Added simple form handler script injection if needed, but existing script.js handles basic form submission -->
 	</body>
 </html>
