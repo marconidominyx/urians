@@ -421,28 +421,31 @@ nav ul li a.active {
 .mobile-menu {
 	display: none;
 	cursor: pointer;
-	font-size: 1.5rem;
+	font-size: 1.6rem;
 	color: var(--text-primary);
-	transition: all 0.3s ease;
+	transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 	z-index: 1002;
-	padding: 0.5rem;
+	padding: 0.4rem;
 	background: none;
 	border: none;
 	position: relative;
-	width: 44px;
-	height: 44px;
-	border-radius: 8px;
+	width: 50px;
+	height: 50px;
+	border-radius: 12px;
 	align-items: center;
 	justify-content: center;
+	font-weight: 600;
+	flex-shrink: 0;
 }
 
 .mobile-menu:hover {
 	color: var(--primary-color);
-	background-color: rgba(99, 102, 241, 0.1);
+	background-color: rgba(99, 102, 241, 0.15);
+	transform: scale(1.08);
 }
 
 .mobile-menu:active {
-	transform: scale(0.95);
+	transform: scale(0.9);
 }
 
 @media (max-width: 1024px) {
@@ -471,19 +474,24 @@ nav ul li a.active {
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: var(--bg-primary);
+		background: linear-gradient(
+			180deg,
+			rgba(18, 18, 18, 0.99) 0%,
+			rgba(25, 25, 35, 0.97) 100%
+		);
 		flex-direction: column;
-		padding: 5.5rem 1.5rem 2rem;
+		padding: 6rem 1.5rem 2rem;
 		text-align: left;
-		gap: 0.5rem;
+		gap: 0.8rem;
 		z-index: 1001;
 		transform: translateX(100%);
-		transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-		box-shadow: -2px 0 30px rgba(0, 0, 0, 0.3);
-		backdrop-filter: blur(12px);
-		-webkit-backdrop-filter: blur(12px);
-		border-left: 1px solid rgba(99, 102, 241, 0.2);
+		transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+		box-shadow: -8px 0 50px rgba(0, 0, 0, 0.6);
+		backdrop-filter: blur(20px);
+		-webkit-backdrop-filter: blur(20px);
+		border-left: 3px solid rgba(99, 102, 241, 0.4);
 		overflow-y: auto;
+		overscroll-behavior: contain;
 	}
 
 	nav ul.show {
@@ -493,7 +501,8 @@ nav ul li a.active {
 
 	nav ul li {
 		opacity: 0;
-		animation: slideInMenu 0.4s ease forwards;
+		animation: slideInMenu 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+		list-style: none;
 	}
 
 	nav ul.show li {
@@ -501,15 +510,15 @@ nav ul li a.active {
 	}
 
 	nav ul li:nth-child(1) {
-		animation-delay: 0.05s;
+		animation-delay: 0.08s;
 	}
 
 	nav ul li:nth-child(2) {
-		animation-delay: 0.1s;
+		animation-delay: 0.12s;
 	}
 
 	nav ul li:nth-child(3) {
-		animation-delay: 0.15s;
+		animation-delay: 0.16s;
 	}
 
 	nav ul li:nth-child(4) {
@@ -517,75 +526,115 @@ nav ul li a.active {
 	}
 
 	nav ul li a {
-		display: block;
-		padding: 1rem 1.25rem;
-		font-size: 1.1rem;
-		transition: all 0.25s ease;
-		border-radius: 10px;
-		background: transparent;
-		margin: 0.25rem 0;
+		display: flex;
+		align-items: center;
+		padding: 1.15rem 1.5rem;
+		font-size: 1.05rem;
+		transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+		border-radius: 12px;
+		background: linear-gradient(
+			135deg,
+			rgba(99, 102, 241, 0.08) 0%,
+			rgba(99, 102, 241, 0.03) 100%
+		);
+		margin: 0.4rem 0;
 		position: relative;
 		color: var(--text-primary);
 		font-weight: 500;
-		border-left: 3px solid transparent;
+		letter-spacing: 0.4px;
+		border-left: 4px solid transparent;
+		overflow: hidden;
 	}
 
 	nav ul li a::before {
 		content: "";
 		position: absolute;
 		left: 0;
-		top: 0;
-		bottom: 0;
-		width: 3px;
+		top: 50%;
+		transform: translateY(-50%) scaleY(0);
+		width: 4px;
+		height: 80%;
 		background: var(--gradient-primary);
-		border-radius: 2px;
-		transform: scaleY(0);
-		transform-origin: top;
-		transition: transform 0.3s ease;
+		border-radius: 0 2px 2px 0;
+		transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+	}
+
+	nav ul li a::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			90deg,
+			transparent,
+			rgba(99, 102, 241, 0.1),
+			transparent
+		);
+		opacity: 0;
+		transition: opacity 0.3s ease;
+		pointer-events: none;
 	}
 
 	nav ul li a:hover {
-		background: rgba(99, 102, 241, 0.15);
+		background: linear-gradient(
+			135deg,
+			rgba(99, 102, 241, 0.15) 0%,
+			rgba(99, 102, 241, 0.08) 100%
+		);
 		color: var(--primary-color);
-		padding-left: 1.5rem;
+		padding-left: 1.7rem;
+		transform: translateX(8px);
+		box-shadow: 0 4px 16px rgba(99, 102, 241, 0.15);
 	}
 
 	nav ul li a:hover::before {
-		transform: scaleY(1);
+		transform: translateY(-50%) scaleY(1);
+	}
+
+	nav ul li a:hover::after {
+		opacity: 1;
 	}
 
 	nav ul li a.active {
-		background: rgba(99, 102, 241, 0.2);
-		color: var(--primary-color);
-		border-left: 3px solid var(--primary-color);
+		background: linear-gradient(
+			135deg,
+			rgba(99, 102, 241, 0.28) 0%,
+			rgba(99, 102, 241, 0.18) 100%
+		);
+		color: var(--secondary-color);
+		border-left: 4px solid var(--primary-color);
+		box-shadow: 0 6px 24px rgba(99, 102, 241, 0.25);
+		font-weight: 600;
+		padding-left: 1.7rem;
 	}
 
 	nav ul li a.active::before {
-		transform: scaleY(1);
+		transform: translateY(-50%) scaleY(1);
 	}
 
 	/* Hamburger Icon Animation */
 	.mobile-menu i {
-		transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+		transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 		display: block;
+		position: absolute;
+		font-size: 1.6rem;
 	}
 
 	.mobile-menu.active i.fa-bars {
 		opacity: 0;
-		transform: rotate(-90deg) scale(0.5);
-		position: absolute;
+		transform: rotate(-135deg) scale(0.2);
+		pointer-events: none;
 	}
 
 	.mobile-menu.active i.fa-times {
 		opacity: 1;
 		transform: rotate(0) scale(1);
-		color: var(--primary-color);
+		color: var(--secondary-color);
 	}
 
 	.mobile-menu i.fa-times {
 		opacity: 0;
-		transform: rotate(90deg) scale(0.5);
-		position: absolute;
+		transform: rotate(135deg) scale(0.2);
+		pointer-events: none;
 	}
 
 	.mobile-menu:not(.active) i.fa-bars {
@@ -601,9 +650,19 @@ nav ul li a.active {
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: rgba(0, 0, 0, 0.4);
+		background: rgba(0, 0, 0, 0.55);
 		z-index: -1;
-		backdrop-filter: blur(2px);
+		backdrop-filter: blur(5px);
+		animation: fadeInOverlay 0.4s ease;
+	}
+}
+
+@keyframes fadeInOverlay {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }
 
@@ -621,23 +680,25 @@ nav ul li a.active {
 	}
 
 	nav ul {
-		padding: 5rem 1rem 2rem;
-		gap: 0.25rem;
+		padding: 5.5rem 1.2rem 2rem;
+		gap: 0.6rem;
 	}
 
 	nav ul li a {
-		padding: 0.9rem 1rem;
+		padding: 1.05rem 1.2rem;
 		font-size: 1rem;
+		border-radius: 11px;
+		margin: 0.3rem 0;
 	}
 
 	nav ul li a:hover {
-		padding-left: 1.25rem;
+		padding-left: 1.4rem;
 	}
 
 	.mobile-menu {
-		width: 40px;
-		height: 40px;
-		margin-right: -8px;
+		width: 44px;
+		height: 44px;
+		margin-right: -6px;
 	}
 }
 
@@ -645,10 +706,12 @@ nav ul li a.active {
 	from {
 		opacity: 0;
 		transform: translateX(20px);
+		filter: blur(4px);
 	}
 	to {
 		opacity: 1;
 		transform: translateX(0);
+		filter: blur(0);
 	}
 }
 
