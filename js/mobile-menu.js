@@ -77,21 +77,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	function toggleMobileMenu() {
 		navMenu.classList.toggle("show");
 		mobileMenuBtn.classList.toggle("active");
-		const icon = mobileMenuBtn.querySelector("i");
-		if (icon) {
-			icon.classList.toggle("fa-bars");
-			icon.classList.toggle("fa-times");
-		}
 	}
 
 	// Close mobile menu function
 	function closeMobileMenu() {
 		navMenu.classList.remove("show");
 		mobileMenuBtn.classList.remove("active");
-		const icon = mobileMenuBtn.querySelector("i");
-		if (icon) {
-			icon.classList.add("fa-bars");
-			icon.classList.remove("fa-times");
-		}
 	}
 });
