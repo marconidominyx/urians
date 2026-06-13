@@ -1,295 +1,426 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Urian Society - The Future of Community</title>
+		<title>Urian Society — Unite. Create. Evolve.</title>
 		<meta
 			name="description"
-			content="Join the Urian Society, a forward-thinking community of gamers, creators, and learners. Connect with like-minded individuals and participate in exciting events."
+			content="The Urian Society is a forward-thinking community of gamers, creators, and innovators. Connect, collaborate, and build the future together."
 		/>
+		<meta name="theme-color" content="#07070c" />
+
+		<!-- Open Graph -->
+		<meta property="og:title" content="Urian Society — Unite. Create. Evolve." />
+		<meta
+			property="og:description"
+			content="The ultimate ecosystem for gamers, creators, and innovators."
+		/>
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="images/banner_US_1.png" />
+
 		<link rel="icon" type="image/png" href="images/URIAN_SOCIETY.png" />
 		<link rel="apple-touch-icon" href="images/URIAN_SOCIETY.png" />
-		<link
-			rel="shortcut icon"
-			type="image/png"
-			href="images/URIAN_SOCIETY.png"
-		/>
 		<link rel="stylesheet" href="css/styles.css" />
 		<link
 			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 		/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
 			rel="stylesheet"
 		/>
 	</head>
 	<body>
-		<div class="background-globes">
-			<div class="globe globe-1"></div>
-			<div class="globe globe-2"></div>
-			<div class="globe globe-3"></div>
+		<!-- Background FX -->
+		<div class="bg-fx" aria-hidden="true">
+			<div class="aurora a1"></div>
+			<div class="aurora a2"></div>
+			<div class="aurora a3"></div>
 		</div>
+		<div class="bg-grid" aria-hidden="true"></div>
 
 		<!-- Header -->
-		<header class="glass-header">
+		<header class="site-header">
 			<div class="container">
-				<a href="index.html" class="logo">
-					<img
-						src="images/URIAN_SOCIETY.png"
-						alt="Urian Society Logo"
-						class="logo-img"
-					/>
-					<span class="logo-text">Urian Society</span>
+				<a href="./" class="brand">
+					<img src="images/URIAN_SOCIETY.png" alt="Urian Society logo" />
+					<span class="brand-text">Urian Society</span>
 				</a>
-				<nav>
-					<ul class="nav-links">
-						<li><a href="index.html" class="active">Home</a></li>
-						<li><a href="about.html">About</a></li>
-						<li><a href="events.html">Events</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-
-					<button class="mobile-menu" aria-label="Toggle menu">
-						<i class="fas fa-bars"></i>
-						<i class="fas fa-times"></i>
-					</button>
+				<nav class="nav-desktop" aria-label="Primary">
+					<a href="./" class="active">Home</a>
+					<a href="about/">About</a>
+					<a href="events/">Events</a>
+					<a href="contact/">Contact</a>
 				</nav>
+				<div class="header-cta">
+					<a href="https://discord.gg/razAZHTvu8" class="btn btn-primary">
+						<i class="fab fa-discord"></i> Join
+					</a>
+					<button
+						class="nav-toggle"
+						aria-label="Open menu"
+						aria-expanded="false"
+						aria-controls="mobileNav"
+					>
+						<span></span><span></span><span></span>
+					</button>
+				</div>
 			</div>
 		</header>
 
-		<!-- Hero Section -->
-		<section class="hero-modern">
-			<div class="container hero-container">
-				<div class="hero-content">
-					<div class="hero-badge fade-in">
-						<span class="pulse-dot"></span> Now Recruiting
+		<!-- Mobile nav -->
+		<nav class="nav-mobile" id="mobileNav" aria-label="Mobile">
+			<a href="./" class="active">Home</a>
+			<a href="about/">About</a>
+			<a href="events/">Events</a>
+			<a href="contact/">Contact</a>
+			<a
+				href="https://discord.gg/razAZHTvu8"
+				class="btn btn-primary mobile-join"
+			>
+				<i class="fab fa-discord"></i> Join Discord
+			</a>
+		</nav>
+
+		<main>
+			<!-- Hero -->
+			<section class="hero">
+				<div class="container hero-grid">
+					<div class="hero-content">
+						<span class="badge-live reveal">
+							<span class="pulse"></span> Now recruiting new members
+						</span>
+						<h1 class="hero-title reveal d1">
+							Unite. Create. <span class="text-gradient">Evolve.</span>
+						</h1>
+						<p class="hero-sub reveal d2">
+							The ultimate ecosystem for gamers, creators, and innovators to
+							connect, collaborate, and build the future — together.
+						</p>
+						<div class="hero-actions reveal d3">
+							<a href="https://discord.gg/razAZHTvu8" class="btn btn-primary btn-lg">
+								<i class="fab fa-discord"></i> Join the Society
+							</a>
+							<a href="about/" class="btn btn-ghost btn-lg">
+								Discover More <i class="fas fa-arrow-right"></i>
+							</a>
+						</div>
+						<div class="hero-trust reveal d4">
+							<div class="avatars">
+								<span><i class="fas fa-gamepad"></i></span>
+								<span><i class="fas fa-code"></i></span>
+								<span><i class="fas fa-palette"></i></span>
+								<span>+</span>
+							</div>
+							<span>A welcoming home for every kind of creator.</span>
+						</div>
 					</div>
-					<h1 class="hero-title fade-in delay-100">
-						Unite. Create. <span class="text-gradient">Evolve.</span>
-					</h1>
-					<p class="hero-subtitle fade-in delay-200">
-						The ultimate ecosystem for gamers, creators, and innovators to build
-						the future together.
-					</p>
-					<div class="hero-actions fade-in delay-300">
-						<a
-							href="https://discord.gg/razAZHTvu8"
-							class="btn primary-btn glow-effect"
-						>
-							<i class="fab fa-discord"></i> Join the Society
-						</a>
-						<a href="about.html" class="btn secondary-btn glass-btn">
-							Learn More
-						</a>
+
+					<div class="hero-visual reveal d2">
+						<div class="portal-ring"></div>
+						<div class="portal-ring r2"></div>
+						<div class="portal-card">
+							<img src="images/banner_US_1.png" alt="Urian Society community" />
+						</div>
+						<div class="float-chip c1">
+							<i class="fas fa-gamepad"></i> Gaming
+						</div>
+						<div class="float-chip c2"><i class="fas fa-code"></i> Innovation</div>
+						<div class="float-chip c3">
+							<i class="fas fa-users"></i> Community
+						</div>
 					</div>
 				</div>
-				<div class="hero-visual fade-in delay-200">
-					<div class="visual-card-stack">
-						<img
-							src="images/banner_US_1.png"
-							alt="Community Banner"
-							class="main-visual"
-						/>
-						<div class="float-card card-1">
-							<i class="fas fa-gamepad"></i>
-							<span>Gaming</span>
-						</div>
-						<div class="float-card card-2">
-							<i class="fas fa-code"></i>
-							<span>Innovation</span>
-						</div>
-					</div>
+
+				<div class="scroll-cue" aria-hidden="true">
+					<div class="mouse"></div>
+					Scroll
+				</div>
+			</section>
+
+			<!-- Marquee -->
+			<div class="marquee" aria-hidden="true">
+				<div class="marquee-track">
+					<span>
+						Community <i class="fas fa-circle"></i> Tournaments
+						<i class="fas fa-circle"></i> Workshops <i class="fas fa-circle"></i>
+						Networking <i class="fas fa-circle"></i> Gaming
+						<i class="fas fa-circle"></i> Development
+						<i class="fas fa-circle"></i> Design <i class="fas fa-circle"></i>
+					</span>
+					<span>
+						Community <i class="fas fa-circle"></i> Tournaments
+						<i class="fas fa-circle"></i> Workshops <i class="fas fa-circle"></i>
+						Networking <i class="fas fa-circle"></i> Gaming
+						<i class="fas fa-circle"></i> Development
+						<i class="fas fa-circle"></i> Design <i class="fas fa-circle"></i>
+					</span>
 				</div>
 			</div>
-		</section>
 
-		<!-- Infinite Marquee -->
-		<div class="marquee-section">
-			<div class="marquee-content">
-				<span
-					>Community • Tournaments • Workshops • Networking • Gaming •
-					Development • Design •
-				</span>
-				<span
-					>Community • Tournaments • Workshops • Networking • Gaming •
-					Development • Design •
-				</span>
-			</div>
-		</div>
-
-		<!-- Bento Grid Values -->
-		<section class="values-bento">
-			<div class="container">
-				<div class="section-header center">
-					<h2 class="section-title">Built on Core Values</h2>
-					<p class="section-desc">
-						The pillars that define our community and drive our mission.
-					</p>
+			<!-- Stats -->
+			<section>
+				<div class="container">
+					<div class="stats">
+						<div class="stat reveal">
+							<div class="stat-num"><span data-count="100" data-suffix="%">100%</span></div>
+							<div class="stat-label">Free, forever</div>
+						</div>
+						<div class="stat reveal d1">
+							<div class="stat-num">24/7</div>
+							<div class="stat-label">Active community</div>
+						</div>
+						<div class="stat reveal d2">
+							<div class="stat-num"><span data-count="4">4</span></div>
+							<div class="stat-label">Core pillars</div>
+						</div>
+						<div class="stat reveal d3">
+							<div class="stat-num"><span data-count="1901">1901</span></div>
+							<div class="stat-label">Urios heritage</div>
+						</div>
+					</div>
 				</div>
+			</section>
 
-				<div class="bento-grid">
-					<!-- Row 1: Big Left, Small Right -->
-					<div class="bento-card large-card community-card fade-in">
-						<div class="card-content">
-							<div class="icon-box"><i class="fas fa-users"></i></div>
-							<h3>Community First</h3>
-							<p>
-								We prioritize building meaningful connections over numbers. A
-								supportive environment where every voice matters.
-							</p>
-						</div>
+			<!-- Values bento -->
+			<section>
+				<div class="container">
+					<div class="section-head center">
+						<span class="eyebrow reveal">Our Foundation</span>
+						<h2 class="section-title reveal d1">Built on core values</h2>
+						<p class="section-lead reveal d2">
+							The pillars that define our community and drive everything we do.
+						</p>
 					</div>
 
-					<div class="bento-card innovation-card fade-in delay-100">
-						<div class="card-content">
-							<div class="icon-box"><i class="fas fa-lightbulb"></i></div>
-							<h3>Innovation</h3>
-							<p>
-								Embracing new technologies and creating the future together.
-							</p>
-						</div>
-					</div>
+					<div class="bento">
+						<article class="card feature span-3 row-2 reveal">
+							<div class="card-content">
+								<div class="card-icon"><i class="fas fa-users"></i></div>
+								<h3>Community First</h3>
+								<p>
+									We prioritize meaningful connections over numbers — a
+									supportive environment where every single voice matters and
+									belongs. This is your home base.
+								</p>
+							</div>
+							<i class="fas fa-users card-big-icon" aria-hidden="true"></i>
+						</article>
 
-					<!-- Row 2: Small Left, Big Right -->
-					<div class="bento-card safety-card fade-in delay-200">
-						<div class="card-content">
-							<div class="icon-box"><i class="fas fa-shield-alt"></i></div>
-							<h3>Safe Space</h3>
-							<p>
-								Zero tolerance for toxicity. Respect is our only currency here.
-							</p>
-						</div>
-					</div>
+						<article class="card span-3 reveal d1">
+							<div class="card-content">
+								<div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+								<h3>Innovation</h3>
+								<p>
+									Embracing new technologies and creating the future together,
+									one bold idea at a time.
+								</p>
+							</div>
+						</article>
 
-					<div class="bento-card large-card collab-card fade-in delay-300">
-						<div class="card-content">
-							<div class="collab-text">
-								<div class="icon-box"><i class="fas fa-hands-helping"></i></div>
+						<article class="card span-3 reveal d2">
+							<div class="card-content">
+								<div class="card-icon"><i class="fas fa-shield-halved"></i></div>
+								<h3>Safe Space</h3>
+								<p>
+									Zero tolerance for toxicity. Respect is the only currency that
+									circulates here.
+								</p>
+							</div>
+						</article>
+
+						<article class="card span-6 reveal d1">
+							<div class="card-content">
+								<div class="card-icon"><i class="fas fa-handshake-angle"></i></div>
 								<h3>Collaboration</h3>
 								<p>
 									Work together on projects, host events, and achieve common
-									goals. The power of many.
+									goals. The power of many, focused as one.
+								</p>
+							</div>
+							<i class="fas fa-handshake-angle card-big-icon" aria-hidden="true"></i>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- Tracks -->
+			<section>
+				<div class="container">
+					<div class="section-head center">
+						<span class="eyebrow reveal">The Experience</span>
+						<h2 class="section-title reveal d1">Find your track</h2>
+						<p class="section-lead reveal d2">
+							However you create, there's a lane for you inside the Society.
+						</p>
+					</div>
+
+					<div class="tracks">
+						<article class="track reveal">
+							<div class="track-icon"><i class="fas fa-gamepad"></i></div>
+							<div class="num">01</div>
+							<h3>Play</h3>
+							<p>Game nights, tournaments, and squads that actually have your back.</p>
+						</article>
+						<article class="track reveal d1">
+							<div class="track-icon"><i class="fas fa-code"></i></div>
+							<div class="num">02</div>
+							<h3>Build</h3>
+							<p>Code-jams, dev talks, and open-source projects to sharpen your craft.</p>
+						</article>
+						<article class="track reveal d2">
+							<div class="track-icon"><i class="fas fa-palette"></i></div>
+							<div class="num">03</div>
+							<h3>Create</h3>
+							<p>Design workshops and creative challenges to bring your ideas to life.</p>
+						</article>
+						<article class="track reveal d3">
+							<div class="track-icon"><i class="fas fa-comments"></i></div>
+							<div class="num">04</div>
+							<h3>Connect</h3>
+							<p>Voice channels, meetups, and friendships that outlast the session.</p>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- CTA band -->
+			<section>
+				<div class="container">
+					<div class="cta-band reveal">
+						<h2>Ready to join the Society?</h2>
+						<p>
+							Jump into our Discord, introduce yourself, and become part of
+							something bigger. It takes 30 seconds.
+						</p>
+						<a
+							href="https://discord.gg/razAZHTvu8"
+							class="btn btn-discord btn-lg"
+						>
+							<i class="fab fa-discord"></i> Launch Discord
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- FAQ -->
+			<section>
+				<div class="container">
+					<div class="section-head center">
+						<span class="eyebrow reveal">Questions</span>
+						<h2 class="section-title reveal d1">Frequently asked</h2>
+					</div>
+
+					<div class="faq-list">
+						<div class="faq-item reveal">
+							<button class="faq-q">
+								How do I join? <span class="icon"><i class="fas fa-plus"></i></span>
+							</button>
+							<div class="faq-a">
+								<p>
+									Simply click any "Join Discord" button. Our onboarding bot will
+									guide you through the first steps and get you settled in.
+								</p>
+							</div>
+						</div>
+						<div class="faq-item reveal d1">
+							<button class="faq-q">
+								Is it free? <span class="icon"><i class="fas fa-plus"></i></span>
+							</button>
+							<div class="faq-a">
+								<p>
+									Yes — 100% free, always. We believe in open, accessible
+									communities for everyone.
+								</p>
+							</div>
+						</div>
+						<div class="faq-item reveal d2">
+							<button class="faq-q">
+								What events do you host?
+								<span class="icon"><i class="fas fa-plus"></i></span>
+							</button>
+							<div class="faq-a">
+								<p>
+									Weekly game nights, code-jams, design workshops, and movie
+									nights — with a new season of tournaments brewing right now.
 								</p>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-
-		<!-- Join CTA Bar -->
-		<section class="join-cta-bar">
-			<div class="container">
-				<div class="cta-box glass-panel">
-					<div class="cta-text">
-						<h2>Ready to Join?</h2>
-						<p>Jump into our Discord and introduce yourself.</p>
-					</div>
-					<a href="https://discord.gg/razAZHTvu8" class="btn primary-btn large">
-						Launch Discord <i class="fas fa-arrow-right"></i>
-					</a>
-				</div>
-			</div>
-		</section>
-
-		<!-- FAQ Section -->
-		<section class="faq-section">
-			<div class="container">
-				<h2 class="section-title">FAQ</h2>
-				<div class="faq-grid">
-					<div class="faq-item glass-card">
-						<div class="faq-question">
-							<h3>How do I join?</h3>
-							<i class="fas fa-plus"></i>
-						</div>
-						<div class="faq-answer">
-							<p>
-								Simply click the "Join Discord" button! Our onboarding bot will
-								guide you through the initial steps.
-							</p>
-						</div>
-					</div>
-					<div class="faq-item glass-card">
-						<div class="faq-question">
-							<h3>Is it free?</h3>
-							<i class="fas fa-plus"></i>
-						</div>
-						<div class="faq-answer">
-							<p>Yes, 100% free. We believe in open communities.</p>
-						</div>
-					</div>
-					<div class="faq-item glass-card">
-						<div class="faq-question">
-							<h3>What events do you host?</h3>
-							<i class="fas fa-plus"></i>
-						</div>
-						<div class="faq-answer">
-							<p>
-								We host weekly gaming nights, code-jams, design workshops, and
-								movie nights.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+			</section>
+		</main>
 
 		<!-- Footer -->
-		<footer class="modern-footer">
+		<footer class="site-footer">
 			<div class="container">
-				<div class="footer-top">
+				<div class="footer-grid">
 					<div class="footer-brand">
-						<img
-							src="images/URIAN_SOCIETY.png"
-							alt="Logo"
-							class="footer-logo"
-						/>
-						<p>Empowering the next generation of digital natives.</p>
-					</div>
-					<div class="footer-links">
-						<h4>Explore</h4>
-						<ul>
-							<li><a href="about.html">About</a></li>
-							<li><a href="events.html">Events</a></li>
-							<li><a href="contact.html">Contact</a></li>
-						</ul>
-					</div>
-					<div class="footer-social">
-						<h4>Connect</h4>
-						<div class="social-icons">
-							<a href="https://discord.gg/razAZHTvu8" aria-label="Discord"
-								><i class="fab fa-discord"></i
-							></a>
-							<a href="https://x.com/realkhoni" aria-label="Twitter"
-								><i class="fab fa-twitter"></i
-							></a>
+						<a href="./" class="brand">
+							<img src="images/URIAN_SOCIETY.png" alt="Urian Society logo" />
+							<span class="brand-text">Urian Society</span>
+						</a>
+						<p>
+							Empowering the next generation of digital natives — gamers,
+							creators, and innovators building the future together.
+						</p>
+						<div class="socials">
+							<a href="https://discord.gg/razAZHTvu8" aria-label="Discord">
+								<i class="fab fa-discord"></i>
+							</a>
+							<a href="https://x.com/realkhoni" aria-label="X / Twitter">
+								<i class="fab fa-x-twitter"></i>
+							</a>
 							<a
 								href="https://www.instagram.com/marconidominyx/"
 								aria-label="Instagram"
-								><i class="fab fa-instagram"></i
-							></a>
+							>
+								<i class="fab fa-instagram"></i>
+							</a>
 							<a
 								href="https://www.youtube.com/@MarconiDominyx"
 								aria-label="YouTube"
-								><i class="fab fa-youtube"></i
-							></a>
+							>
+								<i class="fab fa-youtube"></i>
+							</a>
 						</div>
+					</div>
+					<div class="footer-col">
+						<h4>Explore</h4>
+						<ul>
+							<li><a href="./">Home</a></li>
+							<li><a href="about/">About</a></li>
+							<li><a href="events/">Events</a></li>
+							<li><a href="contact/">Contact</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<h4>Community</h4>
+						<ul>
+							<li>
+								<a href="https://discord.gg/razAZHTvu8">Discord Server</a>
+							</li>
+							<li>
+								<a href="https://www.urios.edu.ph" target="_blank" rel="noopener"
+									>Urios University</a
+								>
+							</li>
+							<li><a href="contact/">Get in touch</a></li>
+						</ul>
 					</div>
 				</div>
 				<div class="footer-bottom">
-					<p>&copy; 2025 Urian Society. All rights reserved.</p>
+					<p>&copy; <span data-year>2025</span> Urian Society. All rights reserved.</p>
+					<p class="made">
+						Crafted with <i class="fas fa-heart"></i> for the Urian community
+					</p>
 				</div>
 			</div>
 		</footer>
 
-		<script src="js/script.js"></script>
-		<!-- Removed theme.js separately if not needed, or keep if it initializes distinct logic. keeping script.js as main -->
-
-		<script src="js/faq.js"></script>
-		<script src="js/mobile-menu.js"></script>
+		<script src="js/main.js"></script>
 	</body>
 </html>

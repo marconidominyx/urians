@@ -1,162 +1,60 @@
-# Urian Society Community Website - 2025 Edition
+# Urian Society — Community Website
 
-A modern, animated website for the Urian Society community, featuring cutting-edge design, smooth animations, and advanced interaction patterns.
+A premium, hand-crafted website for the **Urian Society** — a community of gamers,
+creators, and innovators rooted at Father Saturnino Urios University.
 
-## Features
-
-### Modern Design
-
-- Responsive, fluid design optimized for all devices
-- Smooth animations and transitions
-- Modern color scheme with gradient accents
-- Dark mode support with system preference detection
-
-### Interactive Elements
-
-- Intersection Observer-based animations
-- Smooth scrolling navigation
-- Dynamic header behavior
-- Interactive hover effects
-- Loading states and feedback animations
-
-### Technical Features
-
-- Discord integration for community membership
-- Event system with filtering capabilities
-- News section with dynamic content loading
-- Contact form with animated states
-- Modern image lazy loading
-- System theme preference detection
+**"Aurora" edition** — a dark, glassmorphic design system with living aurora
+gradients, scroll-reveal motion, cursor-tracked spotlights, and fully responsive
+layouts. Zero frameworks, zero build step.
 
 ## Pages
 
-1. **Home**: Dynamic hero section, animated features, and latest updates
-2. **About**: Community background with animated sections
-3. **Events**: Interactive event cards with filtering
-4. **News**: Latest community updates with smooth transitions
-5. **Contact**: Modern contact form with loading states
+| Page    | URL         | Source file          | Highlights                                                 |
+| ------- | ----------- | -------------------- | ---------------------------------------------------------- |
+| Home    | `/`         | `index.html`         | Orbital hero, marquee, value bento, experience tracks, FAQ |
+| About   | `/about/`   | `about/index.html`   | Story, mission, community guidelines, university showcase  |
+| Events  | `/events/`  | `events/index.html`  | "Events brewing" feature + what's-coming timeline          |
+| Contact | `/contact/` | `contact/index.html` | Discord hero + social channel grid                         |
 
-## Technical Details
+> URLs are **extensionless** — each page lives in its own folder as `index.html`,
+> so `/about/` is served with no `.html` in sight. This works identically on
+> GitHub Pages and any local static server (no special config needed).
 
-### Core Technologies
+## Tech
 
-- Vanilla HTML5, CSS3, and ES6+ JavaScript
-- No framework dependencies
-- Modern CSS features (Grid, Flexbox, Variables)
-- Intersection Observer API
-- System theme preference detection
+- Vanilla **HTML5 + CSS3 + ES6** — no dependencies, no build tools
+- A single design-token system in [`css/styles.css`](css/styles.css)
+- One consolidated script, [`js/main.js`](js/main.js):
+  scroll-reveal, count-up stats, FAQ accordion, mobile nav, card spotlights,
+  ambient cursor glow, hide-on-scroll header
+- [Font Awesome 6](https://fontawesome.com/) icons · Google Fonts
+  (Space Grotesk + Inter)
+- Accessibility: focus-visible states, ARIA on nav/accordion,
+  `prefers-reduced-motion` support
 
-### Performance Features
+## Develop locally
 
-- Optimized animations
-- Lazy loading images
-- Smooth scrolling
-- Progressive enhancement
-
-## Getting Started
-
-### Prerequisites
-
-- Modern web browser with ES6+ support
-- Basic understanding of HTML/CSS/JS for customization
-
-### Installation
-
-1. Clone the repository:
+Any static server works — the folder-based clean URLs need no special config:
 
 ```bash
-git clone https://github.com/yourusername/urian-society.git
-```
-
-2. Navigate to the project directory:
-
-```bash
-cd urian-society
-```
-
-3. Serve locally:
-
-```bash
-# Using Python
 python -m http.server 8000
-
-# Using Node.js
-npx serve
+# or: npx serve
 ```
 
-## Customization
+Then visit <http://localhost:8000/> and navigate to `/about/`, `/events/`,
+`/contact/`.
 
-### Theme Colors
+## Deploy
 
-The website uses CSS variables for easy customization. Modify the colors in `css/styles.css`:
+Hosted on **GitHub Pages** from the repository root (`.nojekyll` disables Jekyll).
+Push to `main` and the site updates automatically.
 
-```css
-:root {
-	--primary-color: #2d3bf0; /* Modern electric blue */
-	--secondary-color: #6c72cb; /* Soft purple blue */
-	--accent-color: #845ec2; /* Rich purple */
-	/* ... other colors ... */
-}
-```
+## Customize
 
-### Animations
+All colors, gradients, radii, and motion live as CSS custom properties at the top
+of [`css/styles.css`](css/styles.css) under `:root` — change them in one place to
+re-skin the entire site.
 
-Customize animations by modifying the animation utilities in `css/styles.css`:
+---
 
-```css
-.fade-in {
-	animation: fadeIn 0.5s ease-in;
-}
-
-.slide-up {
-	animation: slideUp 0.5s ease-out;
-}
-
-.scale-in {
-	animation: scaleIn 0.3s ease-out;
-}
-```
-
-### Content
-
-- Replace placeholder text in HTML files
-- Update Discord invite links
-- Add your own images to the `images` folder
-- Customize animation timings and effects
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Opera (latest)
-
-All browsers should support:
-
-- CSS Grid/Flexbox
-- CSS Variables
-- Intersection Observer
-- ES6+ JavaScript
-- System theme preference detection
-
-## Performance Optimization
-
-The website includes several performance optimizations:
-
-- Efficient animation handling
-- Image lazy loading
-- Smooth scrolling
-- Progressive enhancement
-- System theme preference detection
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-- Font Awesome for icons
-- Google Fonts for typography
-- Discord for community platform
-- Modern web APIs for enhanced functionality
+Crafted with care for the Urian community.
