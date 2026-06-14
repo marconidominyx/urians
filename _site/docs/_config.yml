@@ -1,0 +1,5 @@
+# Disable Jekyll processing
+exclude: [".nojekyll"]
+include: []
+markdown: kramdown
+plugins: []
