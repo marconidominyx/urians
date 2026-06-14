@@ -1,4 +1,5 @@
 [build]
+  command = ""
   publish = "."
 
 # Configure pretty URLs (trailing slash behavior)
