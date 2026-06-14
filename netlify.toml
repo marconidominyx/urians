@@ -1,5 +1,5 @@
 [build]
-  command = ""
+  command = "echo 'Skipping build stage'"
   publish = "."
 
 # Configure pretty URLs (trailing slash behavior)
