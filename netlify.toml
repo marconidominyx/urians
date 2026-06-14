@@ -1,0 +1,9 @@
+[build]
+  publish = "."
+
+# Configure pretty URLs (trailing slash behavior)
+# This matches the local development experience where /about/ resolves to about/index.html
+[build.processing]
+  skip_processing = false
+[build.processing.html]
+  pretty_urls = true
